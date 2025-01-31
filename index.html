@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript obfuscator kenzdeveloper update version 1.1">
+    <title>Obfuscator KenzDeveloper Base 32 & Base 64</title>
+    <link rel="stylesheet" href="/asset/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Obfuscator</h1>
+
+<!-- Drop & Drag File Upload -->
+<div id="dropZone">
+    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+    <p id="dropText">Drag & drop file di sini atau klik untuk pilih file</p>
+    <input type="file" id="fileInput" accept=".js">
+</div>
+<p id="fileName" style="color: #ddd; margin-top: 10px;"></p>
+
+        <button onclick="handleFileUpload()">Upload & Obfuscate</button>
+
+        <textarea id="inputCode" placeholder="Masukkan kode JavaScript di sini..."></textarea>
+
+       <div class="buttons">
+  <button onclick="encodeBase64()">Obfuscate Base64</button>
+  <button onclick="encodeBase32()">Obfuscate Base32</button>
+  <button onclick="encodeJSObfuscator()">Obfuscate JavaScript</button> <!-- Tambahan -->
+       </div>
+
+        <textarea id="outputCode" placeholder="Hasil obfuscation muncul di sini..." readonly></textarea>
+
+        <button onclick="copyToClipboard()">Copy</button>
+        <button onclick="downloadObfuscated()">Download File</button>
+    </div>
+
+    <script src="/asset/main.js"></script>
+</body>
+</html>
